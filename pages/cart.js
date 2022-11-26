@@ -1,10 +1,10 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React, { useContext } from 'react'
-import { XCircleIcon } from '@heroicons/react/outline'
 import Layout from '../components/Layout'
 import { Store } from '../utils/Store'
-import { useRouter } from 'next/router'
+import { XCircleIcon } from '@heroicons/react/outline'
+import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
 function CartScreen() {
@@ -14,7 +14,7 @@ function CartScreen() {
     cart: { cartItems },
   } = state
 
-  const removeItemHandler = (item) => {
+  const removeItemhandler = (item) => {
     dispatch({ type: 'CART_REMOVE_ITEM', payload: item })
   }
 

@@ -4,8 +4,6 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import Layout from '../../components/Layout'
 import data from '../../utils/data'
-import React, { useContext } from 'react'
-import { Store } from '../../utils/Store'
 
 export default function ProductScreen() {
   const { query } = useRouter()
@@ -19,6 +17,7 @@ export default function ProductScreen() {
       <div className="py-2">
         <Link href="/">Back to products</Link>
       </div>
+
       <div className="grid md:grid-cols-4 md:gap-3">
         <div className="md:col-span-2">
           <Image
