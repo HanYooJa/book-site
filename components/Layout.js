@@ -21,22 +21,20 @@ export default function Layout({ title, children }) {
       <div className="flex min-h-screen flex-col justify-between">
         <header>
           <nav className="flex h-12 items-center px-4 justify-between shadow-md bg-slate-200">
-            <Link href="/">
-              <a className="text-lg font-bold">Book-site</a>
+            <Link href="/" className="text-lg font-bold">
+              <a>Book-site</a>
             </Link>
             <div>
-              <Link href="/cart">
-                <a className="p-2">
-                  Cart
-                  {cartItemsCount > 0 && (
-                    <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
-                      {cartItemsCount}
-                    </span>
-                  )}
-                </a>
+              <Link href="/cart" className="p-2">
+                <a>Cart</a>
+                {cartItemsCount > 0 && (
+                  <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
+                    {cartItemsCount}
+                  </span>
+                )}
               </Link>
-              <Link href="/login">
-                <a className="p-2">Login</a>
+              <Link href="/login" className="p-2">
+                <a>Login</a>
               </Link>
             </div>
           </nav>
