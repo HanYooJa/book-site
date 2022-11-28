@@ -21,7 +21,7 @@ function CartScreen() {
       <h1 className="mb-4 text-xl">Shopping Cart</h1>
       {cartItems.length === 0 ? (
         <div>
-          -Cart is empty. <Link href="/">Go shopping</Link>-
+          Cart is empty. <Link href="/">Go shopping</Link>
         </div>
       ) : (
         <div className="grid md:grid-cols-4 md:gap-5">
@@ -29,9 +29,9 @@ function CartScreen() {
             <table className="min-w-full ">
               <thead className="border-b">
                 <tr>
-                  -<th className="p-5 text-left">Item</th>- -
-                  <th className="p-5 text-right">Quantity</th>- -
-                  <th className="p-5 text-right">Price</th>- -
+                  -<th className="p-5 text-left">Item</th>
+                  <th className="p-5 text-right">Quantity</th>
+                  <th className="p-5 text-right">Price</th>
                   <th className="p-5">Action</th>
                 </tr>
               </thead>
@@ -40,10 +40,10 @@ function CartScreen() {
                   <tr key={item.slug} className="border-b">
                     <td>
                       <Link
-                        href={'/product/${item.slug}'}
+                        href={`/product/${item.slug}`}
                         className="flex items-center"
-                        legacyBehavior>
-
+                        legacyBehavior
+                      >
                         <Image
                           src={item.image}
                           alt={item.name}
@@ -51,7 +51,6 @@ function CartScreen() {
                           height={50}
                         ></Image>
                         {item.name}
-
                       </Link>
                     </td>
 
@@ -90,7 +89,7 @@ function CartScreen() {
         </div>
       )}
     </Layout>
-  );
+  )
 }
 
 export default dynamic(() => Promise.resolve(CartScreen), { ssr: false })
