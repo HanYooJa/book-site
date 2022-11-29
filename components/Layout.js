@@ -41,15 +41,6 @@ export default function Layout({ title, children }) {
                   )}
                 </a>
               </Link>
-              {status === 'loading' ? (
-                'Loading'
-              ) : session?.user ? (
-                session.user.name
-              ) : (
-                <Link href="/login">
-                  <a className="p-2">Login</a>
-                </Link>
-              )}
 
               <Link href="/login" className="p-2">
                 Login
