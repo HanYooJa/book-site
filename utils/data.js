@@ -1,4 +1,20 @@
+import bcrypt from 'bcryptjs'
+
 const data = {
+  users: [
+    {
+      name: 'John',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'Jane',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
       name: '칵테일, 러브, 좀비',
@@ -14,7 +30,7 @@ const data = {
     },
     {
       name: '쉽게 배우는 알고리즘',
-      slug: 'book',
+      slug: 'book1',
       category: 'books',
       image: '/images/Subin.png',
       price: 26190,
@@ -26,7 +42,7 @@ const data = {
     },
     {
       name: '그리고 아무도 없었다',
-      slug: 'book',
+      slug: 'book2',
       category: 'books',
       image: '/images/Yoojeong.png',
       price: 10800,
@@ -38,7 +54,7 @@ const data = {
     },
     {
       name: '셜록홈즈 X-파일',
-      slug: 'book',
+      slug: 'book3',
       category: 'books',
       image: '/images/Yoona.jpg',
       price: 9000,

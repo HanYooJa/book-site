@@ -22,19 +22,21 @@ export default function Layout({ title, children }) {
         <header>
           <nav className="flex h-12 items-center px-4 justify-between shadow-md bg-slate-200">
             <Link href="/" className="text-lg font-bold">
-              <a>Book-site</a>
+              Book-site
             </Link>
             <div>
-              <Link href="/cart" className="p-2">
-                <a>Cart</a>
-                {cartItemsCount > 0 && (
-                  <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
-                    {cartItemsCount}
-                  </span>
-                )}
+              <Link href="/cart">
+                <a className="p-2">
+                  Cart
+                  {cartItemsCount > 0 && (
+                    <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
+                      {cartItemsCount}
+                    </span>
+                  )}
+                </a>
               </Link>
               <Link href="/login" className="p-2">
-                <a>Login</a>
+                Login
               </Link>
             </div>
           </nav>
