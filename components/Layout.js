@@ -4,21 +4,12 @@ import { useContext, useEffect, useState } from 'react'
 import { Store } from '../utils/Store'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { useSession } from 'next-auth/react'
 import { signOut, useSession } from 'next-auth/react'
 import { Menu } from '@headlessui/react'
 import DropdownLink from './DropdownLink'
 import Cookies from 'js-cookie'
 import React from 'react'
 
-export default function DropdownLink(props) {
-  let { href, children, ...rest } = props
-  return (
-  <Link href={href}>
-  <a {...rest}>{children}</a>
-  </Link>
-  )
-  }
 export default function Layout({ title, children }) {
   const { status, data: session } = useSession()
   const { state, dispatch } = useContext(Store)
