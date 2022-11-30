@@ -46,15 +46,14 @@ function CartScreen() {
                   <tr key={item.slug} className="border-b">
                     <td>
                       <Link href={`/product/${item.slug}`}>
-                        <a className="flex items-center">
-                          <Image
-                            src={item.image}
-                            alt={item.name}
-                            width={50}
-                            height={50}
-                          ></Image>
-                          <p>{item.name}</p>
-                        </a>
+                        <a className="flex items-center"></a>
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          width={50}
+                          height={50}
+                        ></Image>
+                        <p>{item.name}</p>
                       </Link>
                     </td>
 

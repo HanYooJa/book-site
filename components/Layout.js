@@ -37,19 +37,17 @@ export default function Layout({ title, children }) {
       <div className="flex min-h-screen flex-col justify-between">
         <header>
           <nav className="flex h-12 items-center px-4 justify-between shadow-md bg-slate-200">
-            <Link href="/" className="text-lg font-bold">
-              Book-site
+            <Link href="/">
+              <a className="text-lg font-bold">Book-site</a>
             </Link>
             <div>
               <Link href="/cart">
-                <a className="p-2">
-                  Cart
-                  {cartItemsCount > 0 && (
-                    <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
-                      {cartItemsCount}
-                    </span>
-                  )}
-                </a>
+                <a className="p-2">Cart</a>
+                {cartItemsCount > 0 && (
+                  <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
+                    {cartItemsCount}
+                  </span>
+                )}
               </Link>
               {status === 'loading' ? (
                 'Loading'
@@ -61,17 +59,14 @@ export default function Layout({ title, children }) {
 
                   <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white shadow-lg ">
                     <Menu.Item>
-                      <DropdownLink className="dropdown-link" href="/profile">
-                        Profile
+                      <DropdownLink href="/profile">
+                        <a className="dropdown-link">Profile</a>
                       </DropdownLink>
                     </Menu.Item>
 
                     <Menu.Item>
-                      <DropdownLink
-                        className="dropdown-link"
-                        href="/order-history"
-                      >
-                        Order History
+                      <DropdownLink href="/order-history">
+                        <a className="dropdown-link">Order History</a>
                       </DropdownLink>
                     </Menu.Item>
 
@@ -92,8 +87,8 @@ export default function Layout({ title, children }) {
                 </Link>
               )}
 
-              <Link href="/login" className="p-2">
-                Login
+              <Link href="/login">
+                <a className="p-2">Login</a>
               </Link>
             </div>
           </nav>
