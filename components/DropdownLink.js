@@ -6,5 +6,5 @@ export default function DropdownLink(props) {
     <Link href={href} {...rest} legacyBehavior>
       {children}
     </Link>
-  );
+  )
 }
